@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pack Bíblico Infantil | Actividades Cristianas para Niños</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+
+<!-- ===== TOP BAR ===== -->
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <img src="images/anjo.png" class="angel-icon" alt="Anjo">
+    <p>🔥 PROMOCIÓN SOLO HOY: <span id="today-date">04/03/2026</span></p>
+  </div>
+</div>
+
+<!-- ===== TOAST ===== -->
+<div class="toast" id="toast">
+  <div class="toast-icon-box">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <rect width="24" height="24" rx="6" fill="#15803D"/>
+      <path d="M5 13l4 4L19 7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <div class="toast-body">
+    <strong>Valeria F. acaba de garantir o Pack Completo</strong>
+    <span>há 3 minutos · Guadalajara, Jal.</span>
+  </div>
+  <button class="toast-close" onclick="hideToast()" aria-label="Fechar">×</button>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <h1>
+    ¿Tu Hijo Pasa Horas en el Celular
+    <span class="highlight">Todos los Días?</span>
+  </h1>
+
+  <p class="subtitle" style="text-align: center;">
+    Sustituye el exceso de pantallas por <strong>+600 actividades, +20 juegos</strong> y <strong>+10 libros edificantes</strong> para fortalecer la fe de forma divertida.
+  </p>
+<!-- ANTES / DESPUÉS -->
+<div class="before-after">
+  <div class="ba-card before">
+    <div class="ba-mockup-before">
+      <img src="images/antes.png" alt="Antes" class="ba-image">
+    </div>
+    <div class="ba-label">ANTES</div>
+  </div>
+
+  <div class="ba-card after">
+    <div class="ba-mockup-after">
+      <img src="images/despues.png" alt="Después" class="ba-image">
+    </div>
+    <div class="ba-label">DESPUÉS</div>
+  </div>
+</div></br>
+</section>
+
+<!-- ===== PRICE SECTION ===== -->
+<section class="price-section">
+
+  <div class="plans-section">
+
+  <!-- PACK COMPLETO -->
+  <div class="plan-card featured">
+    <div class="plan-badge">⭐ MÁS VENDIDO</div>
+    <div class="plan-name">PACK COMPLETO</div>
+    <div class="plan-price">
+      <span class="por">Por solo</span><br>
+      <span class="currency">$</span><span class="amount" id="price-complete">67 MXN</span>
+      <span style="font-size:0.75rem;color:var(--text-soft);font-weight:700;display:block;margin-bottom: 20px;">MXN · Pago único · Acceso de por vida</span>
+    </div>
+  
+    <ul class="plan-items">
+      <li class="has"><span class="ci">✅</span> +20 Juegos Bíblicos Interactivos</li>
+      <li class="has"><span class="ci">✅</span> JUEGO DE LAS 3 PISTAS</li>
+      <li class="has"><span class="ci">✅</span> JUEGO UNO DE LA FE</li>
+      <li class="has"><span class="ci">✅</span> JUEGO TEMPESTADES O MILAGROS</li>
+      <li class="has"><span class="ci">✅</span> JUEGO ATADO EN LA BIBLIA</li>
+      <li class="has"><span class="ci">✅</span> +600 páginas para colorear</li>
+      <li class="has"><span class="ci">✅</span> +10 libros cristianos edificantes</li>
+      <li class="has"><span class="ci">✅</span> Acceso vitalicio + actualizaciones futuras</li>
+      <li class="has"><span class="ci">✅</span> Acceso inmediato por e-mail</li>
+    </ul>
+    <a href="#comprar" class="btn-primary">QUIERO EL PACK COMPLETO</a>
+    <p class="btn-guarantee">Garantía de 7 días // Acceso inmediato</p>
+  </div></br>
+   
+  <!-- PLAN BÁSICO -->
+  <div class="plan-card">
+    <div class="plan-name">PLAN BÁSICO</div>
+    <div class="plan-price-old">De $67 MXN</div>
+    <div class="plan-price">
+      <span class="por">Por solo</span><br>
+      <span class="currency">$</span><span class="amount">37 MXN</span>
+      <span style="font-size:0.75rem;color:var(--text-soft);font-weight:700;display:block;margin-bottom: 20px;">MXN · Pago único</span>
+    </div>
+    
+    <ul class="plan-items">
+      <li class="has"><span class="ci">✅</span> JUEGO DE LAS 3 PISTAS</li>
+      <li class="has"><span class="ci">✅</span> JUEGO UNO DE LA FE</li>
+      <li class="has"><span class="ci">✅</span> JUEGO TEMPESTADES O MILAGROS</li>
+      <li class="has"><span class="ci">✅</span> JUEGO ATADO EN LA BIBLIA</li>
+      <li class="has"><span class="ci">✅</span> Y MUCHOS MÁS... <span class="highlight">+20 JUEGOS BÍBLICOS</span></li>
+      <li class="has"><span class="ci">✅</span> Acceso vitalicio + actualizaciones futuras</li>
+      <li class="has"><span class="ci">✅</span> Acceso inmediato por e-mail</li>
+      <li class="no"><span class="ci">✖</span> +600 páginas para colorear</li>
+      <li class="no"><span class="ci">✖</span> +10 libros cristanos edificantes</li>
+    </ul>
+    <a href="#comprar-basico" class="btn-secondary">QUIERO EL PLAN BÁSICO</a>
+    <p class="btn-guarantee">Garantía de 7 días // Acceso inmediato</p>
+  </div>  
+</section>
+
+<!-- ===== SOCIAL APPROVAL ===== -->
+<div class="social-approval">
+  <span class="check">✓</span>
+  Aprobado por <strong>+700 Familias Cristianas</strong> en México
+</div>
+
+<!-- ===== PRODUCT VISUAL: GAMES ===== -->
+<section class="product-visual">
+  <div class="inner">
+    <h2 class="section-title">La Alternativa Que Tus Hijos <span>Necesitan Para Salir de las Pantallas</span></h2>
+    <p class="section-sub">Más de 20 Juegos Bíblicos Para Fortalecer la Fe Jugando</p>
+  </div>
+
+    <img src="images/jogos.png" alt="+20 Juegos Bíblicos Inspiradores" class="games-image">
+
+    <h2 class="section-title" style="margin-bottom:8px;">Mucho Más Que Juegos...</h2>
+    <p class="section-sub">El Pack Completo incluye más de 600 páginas para colorear y +10 libros cristanos edificantes para fortalecer aún más la fe de tus hijos.</p>
+
+    <img src="images/color.png" class="games-image">
+</section>
+
+<!-- ===== STATS + SOCIAL PROOF ===== -->
+<section class="stats-section">
+  <h2 class="section-title">Resultados Reales de <span>Personas Reales</span></h2>
+  <p class="section-sub">Mira lo que nuestros clientes dicen después de comprar</p>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-num">+753</div>
+      <div class="stat-label">Familias Satisfechas</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num"><span class="star">⭐</span> 4.9</div>
+      <div class="stat-label">Calificación Promedio</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">+600</div>
+      <div class="stat-label">Páginas de Diversión</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">+10</div>
+      <div class="stat-label">Libros Temáticos</div>
+    </div>
+  </div>
+
+  <!-- WhatsApp testimonials -->
+  <div class="wa-grid">
+    <div class="wa-card">
+      <div class="wa-header">
+        <div class="wa-avatar">👩</div>
+        <div>
+          <div class="wa-name">Mamá de Ana</div>
+          <div class="wa-time">20:58</div>
+        </div>
+      </div>
+      <div class="wa-bubble">
+        Compré para mi hija y quedé emocionada <span class="heart">❤️</span> Ella ama las ilustraciones de la Biblia y cada día me pide leer más. ¡El certificado fue un estímulo enorme! Super recomendado 🙏
+      </div>
+    </div>
+    <div class="wa-card">
+      <div class="wa-header">
+        <div class="wa-avatar">👨</div>
+        <div>
+          <div class="wa-name">Papá de Lucas</div>
+          <div class="wa-time">20:27</div>
+        </div>
+      </div>
+      <div class="wa-bubble">
+        Quiero agradecer de corazón por este material 🙏 Mi hijo quedó encantado con los dibujos de la Biblia. El contenido para mi familia es increíble. ¡Dios los bendiga mucho! 😊❤️
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<!-- ── OBJECTIONS / FAQ TOQUE ── -->
+<div class="section bg-gray">
+  <div class="inner">
+    <h2 class="section-title">Tal vez estés pensando...</h2>
+    <p class="section-sub">Toca la tarjeta para ver la respuesta</p>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">"¿Mi hijo solo quiere el celular... se va a interesar?"</div>
+        <div class="faq-a">¡Exactamente por eso creamos esto! Los juegos y páginas para colorear están diseñados para ser MÁS atractivos que el celular. Los papás nos dicen que el problema ahora es que no los pueden parar de colorear.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">"¿Estos juegos realmente enseñan la Biblia?"</div>
+        <div class="faq-a">Sí. Cada juego fue creado con el objetivo de que los niños aprendan nombres, historias y versículos bíblicos jugando. Los niños aprenden sin sentirse en clase — y los padres se sorprenden de cuánto retienen.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">"¿Funciona para qué edad?"</div>
+        <div class="faq-a">El material está pensado para niños de 3 a 12 años. Hay páginas simples para los más pequeños y actividades más complejas para los mayores. Perfecto para hogares con hijos de diferentes edades.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">"¿Necesito algo complejo para usarlo?"</div>
+        <div class="faq-a">¡Para nada! Recibes todo por e-mail al instante. Abres el PDF, imprimes las páginas que quieras en cualquier impresora casera y listo. En menos de 5 minutos ya puedes empezar.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">"¿Y si a mi hijo no le gusta?"</div>
+        <div class="faq-a">Tienes 7 días completos de garantía. Si por cualquier razón no estás satisfecho, te devolvemos el 100% de tu dinero — sin preguntas, sin formularios, sin complicaciones. El riesgo es 0% tuyo.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">"¿Cuál es la diferencia del pack completo?"</div>
+        <div class="faq-a">El Plan Básico da acceso solo a los +20 juegos bíblicos. El Pack Completo incluye todo eso MÁS las +600 páginas para colorear y los +10 libros cristianos. Por apenas $8 más, llevas 3 veces más contenido.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PRICE SECTION ===== -->
+<section class="price-section" style="margin-top: -50px;"> 
+
+  <div class="plans-section">
+
+  <!-- PACK COMPLETO -->
+  <div class="plan-card featured">
+    <div class="plan-badge">⭐ MÁS VENDIDO</div>
+    <div class="plan-name">PACK COMPLETO</div>
+    <div class="plan-price">
+      <span class="por">Por solo</span><br>
+      <span class="currency">$</span><span class="amount" id="price-complete">67 MXN</span>
+      <span style="font-size:0.75rem;color:var(--text-soft);font-weight:700;display:block;margin-bottom: 20px;">MXN · Pago único · Acceso de por vida</span>
+    </div>
+  
+    <ul class="plan-items">
+      <li class="has"><span class="ci">✅</span> +20 Juegos Bíblicos Interactivos</li>
+      <li class="has"><span class="ci">✅</span> JUEGO DE LAS 3 PISTAS</li>
+      <li class="has"><span class="ci">✅</span> JUEGO UNO DE LA FE</li>
+      <li class="has"><span class="ci">✅</span> JUEGO TEMPESTADES O MILAGROS</li>
+      <li class="has"><span class="ci">✅</span> JUEGO ATADO EN LA BIBLIA</li>
+      <li class="has"><span class="ci">✅</span> +600 páginas para colorear</li>
+      <li class="has"><span class="ci">✅</span> +10 libros cristianos edificantes</li>
+      <li class="has"><span class="ci">✅</span> Acceso vitalicio + actualizaciones futuras</li>
+      <li class="has"><span class="ci">✅</span> Acceso inmediato por e-mail</li>
+    </ul>
+    <a href="#comprar" class="btn-primary">QUIERO EL PACK COMPLETO</a>
+    <p class="btn-guarantee">Garantía de 7 días // Acceso inmediato</p>
+  </div></br>
+   
+  <!-- PLAN BÁSICO -->
+  <div class="plan-card">
+    <div class="plan-name">PLAN BÁSICO</div>
+    <div class="plan-price-old">De $67 MXN</div>
+    <div class="plan-price">
+      <span class="por">Por solo</span><br>
+      <span class="currency">$</span><span class="amount">37 MXN</span>
+      <span style="font-size:0.75rem;color:var(--text-soft);font-weight:700;display:block;margin-bottom: 20px;">MXN · Pago único</span>
+    </div>
+    
+    <ul class="plan-items">
+      <li class="has"><span class="ci">✅</span> JUEGO DE LAS 3 PISTAS</li>
+      <li class="has"><span class="ci">✅</span> JUEGO UNO DE LA FE</li>
+      <li class="has"><span class="ci">✅</span> JUEGO TEMPESTADES O MILAGROS</li>
+      <li class="has"><span class="ci">✅</span> JUEGO ATADO EN LA BIBLIA</li>
+      <li class="has"><span class="ci">✅</span> Y MUCHOS MÁS... <span class="highlight">+20 JUEGOS BÍBLICOS</span></li>
+      <li class="has"><span class="ci">✅</span> Acceso vitalicio + actualizaciones futuras</li>
+      <li class="has"><span class="ci">✅</span> Acceso inmediato por e-mail</li>
+      <li class="no"><span class="ci">✖</span> +600 páginas para colorear</li>
+      <li class="no"><span class="ci">✖</span> +10 libros cristanos edificantes</li>
+    </ul>
+    <a href="#comprar-basico" class="btn-secondary">QUIERO EL PLAN BÁSICO</a>
+    <p class="btn-guarantee">Garantía de 7 días // Acceso inmediato</p>
+  </div>  
+</section>
+
+<!-- ===== PAIN SECTION ===== -->
+<section class="pain-section">
+  <h2 class="section-title">Los Dolores Que Todo<br><span class="orange">Padre Cristiano Conoce</span></h2>
+  <p class="sec-subtitle">Si te identificas, sabe que no estás solo.</p>
+
+  <div class="pain-list-items">
+    <div class="pain-item">
+      <div class="pain-icon-box">📱</div>
+      <div>
+        <h4>Tiempo de pantalla excesivo</h4>
+        <p style="text-align: justify;">Niños pasando horas en el celular y tablet, perdiendo la infancia preciosa en las pantallas.</p>
+      </div>
+    </div>
+    <div class="pain-item">
+      <div class="pain-icon-box">🧩</div>
+      <div>
+        <h4>Falta de actividades saludables</h4>
+        <p style="text-align: justify;">Dificultad para encontrar actividades que atrapen la atención sin depender de tecnología.</p>
+      </div>
+    </div>
+    <div class="pain-item">
+      <div class="pain-icon-box">🧠</div>
+      <div>
+        <h4>Dificultad de concentración</h4>
+        <p style="text-align: justify;">Niños cada vez más dispersos, sin paciencia para actividades manuales o de lectura.</p>
+      </div>
+    </div>
+    <div class="pain-item">
+      <div class="pain-icon-box">📖</div>
+      <div>
+        <h4>Alejamiento de los valores</h4>
+        <p style="text-align: justify;">Poco contacto con historias bíblicas y enseñanzas de la fe en el día a día familiar.</p>
+      </div>
+    </div>
+    <div class="pain-item">
+      <div class="pain-icon-box">👨‍👩‍👧</div>
+      <div>
+        <h4>Menos tiempo en familia</h4>
+        <p style="text-align: justify;">Cada uno en su rincón, en su propio dispositivo, sin conexión real entre padres e hijos.</p>
+      </div>
+    </div>
+  </div>
+
+   <div class="cta-mid">
+    <p style="text-align: justify; color: #4f4f4f;">Existe Una Alternativa Real Para Todos esos Problemas. Más de 20 juegos bíblicos interactivos creados para transformar el tiempo de los niños en aprendizaje, diversión y fortalecimiento de la fe. +600 páginas para colorear, +10 libros edificantes.</p>
+    <a href="#comprar" class="btn-primary">Quiero Menos Pantalla y Más Fe</a>
+    <small>+ de 700 familias cristianas transformadas</small>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<div class="section bg-gray">
+  <div class="inner">
+    <h2 class="section-title">Cómo Funciona en <span>4 Pasos Simples</span></h2>
+    <p class="section-sub">¡Es tan fácil que puedes empezar a usarlo en menos de 5 minutos!</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <h3>Haz tu compra</h3>
+          <p>Haz clic en el botón, completa tus datos y finaliza en menos de 2 minutos</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <h3>Recíbelo en tu e-mail</h3>
+          <p>Inmediatamente después de la compra, el enlace de acceso llega a tu correo</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <h3>Imprime y usa</h3>
+          <p>Descarga el PDF, imprime las páginas que quieras ¡y comienza la diversión!</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div>
+          <h3>Momentos especiales</h3>
+          <p>Aprovecha cada momento con tus hijos aprendiendo y coloreando juntos</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="trust-pills">
+      <div class="trust-pill">
+        <div class="icon">💻</div>
+        <div class="label">100%</div>
+        <div class="sub">Digital y Práctico</div>
+      </div>
+      <div class="trust-pill">
+        <div class="icon">🖨️</div>
+        <div class="label">Ilimitado</div>
+        <div class="sub">Imprime cuantas veces quieras</div>
+      </div>
+      <div class="trust-pill">
+        <div class="icon">⚡</div>
+        <div class="label">Instantáneo</div>
+        <div class="sub">Acceso al comprar</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials-section">
+  <h2 class="section-title">Familias Reales,<br><span class="orange">Transformaciones Reales</span></h2>
+  <p class="sec-subtitle">Mira cómo otras familias están viviendo momentos especiales</p>
+
+  <div class="test-list">
+    <div class="test-item">
+      <div class="test-item-header">
+        <img class="test-avatar-img" src="images/juliana.jfif" alt="Juliana Ferreira">
+        <div class="test-meta">
+          <strong>Juliana Ferreira</strong>
+          <span class="verified">✓ Verificada</span>
+          <span class="location">Ciudad de México, CDMX</span>
+        </div>
+      </div>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p class="test-tag">🎨 Mi hija dejó la tableta por voluntad propia</p>
+      <p class="test-text">"Muy fácil de usar. Compré, descargué el PDF y en pocos minutos ya estaba imprimiendo para que mi hija pintara. ¡No lo podía creer!"</p>
+    </div>
+
+    <div class="test-item">
+      <div class="test-item-header">
+        <img class="test-avatar-img" src="images/carlos.jfif" alt="Carlos Eduardo">
+        <div class="test-meta">
+          <strong>Carlos Eduardo</strong>
+          <span class="verified">✓ Verificado</span>
+          <span class="location">Monterrey, N.L.</span>
+        </div>
+      </div>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p class="test-tag">🙏 Material perfecto para la escuela dominical</p>
+      <p class="test-text">"Los dibujos son preciosos y realmente enseñan valores bíblicos. Mi hijo aprende jugando y eso para nosotros no tiene precio."</p>
+    </div>
+
+    <div class="test-item">
+      <div class="test-item-header">
+        <img class="test-avatar-img" src="images/priscila.jfif" alt="Priscila Olivares">
+        <div class="test-meta">
+          <strong>Priscila Olivares</strong>
+          <span class="verified">✓ Verificada</span>
+          <span class="location">Guadalajara, Jal.</span>
+        </div>
+      </div>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p class="test-tag">🎨 Perfecto para niños de todas las edades</p>
+      <p class="test-text">"El mismo día que compré ya lo estábamos usando. Mi hijo soltó el celular y estuvo horas pintando. Algo que no pasaba desde hacía meses."</p>
+    </div>
+
+    <div class="test-item">
+      <div class="test-item-header">
+        <img class="test-avatar-img" src="images/renato.jfif" alt="Renato Flores">
+        <div class="test-meta">
+          <strong>Renato Flores</strong>
+          <span class="verified">✓ Verificado</span>
+          <span class="location">Puebla, Pue.</span>
+        </div>
+      </div>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p class="test-tag">📖 Niño aprendiendo la Biblia naturalmente</p>
+      <p class="test-text">"Mi hijo de 8 años ahora me pregunta sobre los personajes bíblicos que aparecen en los juegos. Eso antes no pasaba nunca. Increíble herramienta."</p>
+    </div>
+  </div>
+
+  <!-- COMMUNITY BAR -->
+  <div class="community-bar" id="comprar">
+    <div class="inner">
+    <div class="avatars">
+      <img src="images/1.jfif">
+      <img src="images/2.jfif">
+      <img src="images/3.jfif">
+      <img src="images/4.jfif">
+      <img src="images/5.jfif">
+    </div>
+      <p>Únete a más de <strong>+753 familias</strong> que ya transformaron el tiempo de sus hijos!</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- ── GUARANTEE ── -->
+<div class="guarantee-section">
+  <div class="guarantee-inner">
+    <div class="guarantee-badge">7 Días</div>
+    <h2>🛡️ Garantía de 7 Días</h2>
+    <p>Tu satisfacción es nuestra prioridad absoluta. Si no te gusta, te devolvemos tu inversión íntegramente — sin preguntas, sin complicaciones.</p>
+    <a href="#comprar" class="btn-guarantee-white">QUIERO GARANTIZAR AHORA →</a>
+  </div>
+</div>
+
+<!-- ── FINAL FAQ ── -->
+<div class="section">
+  <h2 class="section-title">¡Resuelve tus dudas aquí!</h2>
+  <p class="section-sub">Todas las respuestas antes de garantizar tu colección.</p>
+
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q">¿Cómo voy a recibir el material? <span class="arrow">▼</span></div>
+      <div class="faq-a">Inmediatamente después de tu compra recibes un e-mail con el enlace de descarga. En segundos ya tienes acceso a todo el contenido en formato PDF.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿El material es físico o digital? <span class="arrow">▼</span></div>
+      <div class="faq-a">Es 100% digital. Recibes el PDF y puedes imprimirlo en casa tantas veces como quieras. No hay costo de envío y el acceso es instantáneo.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Para qué rango de edad es recomendado? <span class="arrow">▼</span></div>
+      <div class="faq-a">Para niños de 3 a 12 años. El material tiene contenido para distintos niveles: páginas simples para los más pequeños y actividades más desafiantes para los mayores.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Puedo usarlo en el ministerio infantil de mi iglesia? <span class="arrow">▼</span></div>
+      <div class="faq-a">¡Sí! Muchos maestros de escuela dominical y líderes de ministerio infantil ya usan nuestro material. Puedes imprimirlo para todos los niños sin límite.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Y si no me gusta? <span class="arrow">▼</span></div>
+      <div class="faq-a">Tienes 7 días de garantía total. Si por cualquier razón no estás satisfecho, te devolvemos el 100% de tu dinero. Sin preguntas, sin burocracia.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Qué formas de pago se aceptan? <span class="arrow">▼</span></div>
+      <div class="faq-a">Aceptamos tarjeta de crédito, débito y otros métodos de pago seguros. Todo el proceso es 100% seguro y encriptado.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Necesito algún programa especial para abrir? <span class="arrow">▼</span></div>
+      <div class="faq-a">No. Solo necesitas cualquier lector de PDF (como Adobe Reader o el visor de tu celular/computadora). Es compatible con Windows, Mac, Android e iOS.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Puedo imprimir cuantas veces quiera? <span class="arrow">▼</span></div>
+      <div class="faq-a">¡Sí, sin límite! Imprime para todos tus hijos, cuantas veces necesites, para siempre. No hay restricciones de uso.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>© 2026 PACK ACTIVIDADES BÍBLICAS · Todos los derechos reservados</p>
+</footer>
+
+<!-- ===== STICKY CTA ===== -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-price">
+    <strong>$67 MXN</strong>
+    <span>Acceso inmediato</span>
+  </div>
+  <a href="#oferta">¡Lo Quiero Ahora!</a>
+</div>
+
+<script src="script.js"></script>
+<script src="animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,375 @@
+/* =========================================
+   ANIMATIONS.CSS — Pack Bíblico Infantil
+   Camada de animações: não altera nada do original
+   ========================================= */
+
+/* ── Fade + Slide In (scroll reveal) ── */
+.anim-reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.55s cubic-bezier(.22,.68,0,1.2), transform 0.55s cubic-bezier(.22,.68,0,1.2);
+}
+.anim-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.anim-reveal.delay-1 { transition-delay: 0.08s; }
+.anim-reveal.delay-2 { transition-delay: 0.16s; }
+.anim-reveal.delay-3 { transition-delay: 0.24s; }
+.anim-reveal.delay-4 { transition-delay: 0.32s; }
+.anim-reveal.delay-5 { transition-delay: 0.40s; }
+
+/* ── Scale In (para cards) ── */
+.anim-scale {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.45s ease, transform 0.45s cubic-bezier(.34,1.56,.64,1);
+}
+.anim-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+.anim-scale.delay-1 { transition-delay: 0.1s; }
+.anim-scale.delay-2 { transition-delay: 0.2s; }
+.anim-scale.delay-3 { transition-delay: 0.3s; }
+.anim-scale.delay-4 { transition-delay: 0.4s; }
+
+/* ── Slide from Left ── */
+.anim-left {
+  opacity: 0;
+  transform: translateX(-28px);
+  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(.22,.68,0,1.2);
+}
+.anim-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── Slide from Right ── */
+.anim-right {
+  opacity: 0;
+  transform: translateX(28px);
+  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(.22,.68,0,1.2);
+}
+.anim-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ─────────────────────────────────────── */
+/* PULSE no botão principal                */
+/* ─────────────────────────────────────── */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  background: rgba(255,255,255,0.18);
+  animation: btn-ripple-loop 2.4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes btn-ripple-loop {
+  0%   { opacity: 0; transform: scale(0.85); }
+  50%  { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 0; transform: scale(1.18); }
+}
+
+/* Shine sweep no btn-primary */
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -75%;
+  width: 50%; height: 100%;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.28) 50%, transparent 100%);
+  animation: shine-sweep 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes shine-sweep {
+  0%   { left: -75%; }
+  45%  { left: 125%; }
+  100% { left: 125%; }
+}
+
+/* ─────────────────────────────────────── */
+/* STAT CARDS — contador animado           */
+/* ─────────────────────────────────────── */
+.stat-card {
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.stat-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 10px 30px rgba(249,115,22,0.18);
+}
+
+/* ─────────────────────────────────────── */
+/* PAIN ITEMS — hover lift                */
+/* ─────────────────────────────────────── */
+.pain-item {
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.pain-item:hover {
+  transform: translateX(5px);
+  box-shadow: -4px 0 0 0 var(--orange);
+}
+
+/* ─────────────────────────────────────── */
+/* STEP NUMBERS — pulsar suave            */
+/* ─────────────────────────────────────── */
+.step-num {
+  animation: step-pop 2.5s ease-in-out infinite;
+}
+.step:nth-child(2) .step-num { animation-delay: 0.3s; }
+.step:nth-child(3) .step-num { animation-delay: 0.6s; }
+.step:nth-child(4) .step-num { animation-delay: 0.9s; }
+
+@keyframes step-pop {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.12); }
+}
+
+/* ─────────────────────────────────────── */
+/* TRUST PILLS hover                       */
+/* ─────────────────────────────────────── */
+.trust-pill {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.trust-pill:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(249,115,22,0.15);
+}
+
+/* ─────────────────────────────────────── */
+/* TESTIMONIAL cards hover                */
+/* ─────────────────────────────────────── */
+.test-item {
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.test-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.09);
+}
+
+/* ─────────────────────────────────────── */
+/* FAQ item — suave bounce                */
+/* ─────────────────────────────────────── */
+.faq-q {
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.faq-q:hover {
+  background: #FFF7ED;
+  color: var(--orange);
+}
+.faq-a {
+  transition: max-height 0.38s cubic-bezier(.4,0,.2,1), padding 0.3s ease;
+  overflow: hidden;
+  max-height: 0;
+  display: block !important; /* sobrescreve o display:none do JS original */
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.faq-a.faq-open {
+  max-height: 400px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+/* ─────────────────────────────────────── */
+/* TOP BAR — shake emoji de fogo          */
+/* ─────────────────────────────────────── */
+.top-bar p {
+  animation: none;
+}
+.top-bar p::before {
+  display: inline-block;
+  animation: fire-shake 0.8s ease-in-out infinite alternate;
+}
+@keyframes fire-shake {
+  0%   { transform: rotate(-10deg) scale(1); }
+  100% { transform: rotate(10deg) scale(1.2); }
+}
+
+/* ─────────────────────────────────────── */
+/* STICKY CTA — bounce in                 */
+/* ─────────────────────────────────────── */
+.sticky-cta.visible {
+  transform: translateY(0);
+  animation: sticky-bounce-in 0.45s cubic-bezier(.34,1.56,.64,1) both;
+}
+@keyframes sticky-bounce-in {
+  0%   { transform: translateY(110%); }
+  100% { transform: translateY(0); }
+}
+
+/* ─────────────────────────────────────── */
+/* HERO h1 — palavra highlight pisca suave*/
+/* ─────────────────────────────────────── */
+.hero h1 .highlight {
+  display: inline-block;
+  animation: highlight-pop 3s ease-in-out infinite;
+}
+@keyframes highlight-pop {
+  0%, 100% { text-shadow: none; }
+  50%       { text-shadow: 0 0 20px rgba(249,115,22,0.35); }
+}
+
+/* ─────────────────────────────────────── */
+/* COMMUNITY BAR avatars — entrada        */
+/* ─────────────────────────────────────── */
+.avatars img {
+  transition: transform 0.2s ease;
+}
+.avatars img:hover {
+  transform: translateY(-4px) scale(1.12);
+  z-index: 2;
+  position: relative;
+}
+
+/* ─────────────────────────────────────── */
+/* BEFORE/AFTER cards hover               */
+/* ─────────────────────────────────────── */
+.ba-card {
+  transition: transform 0.25s ease;
+}
+.ba-card.after:hover {
+  transform: scale(1.03);
+}
+
+/* ─────────────────────────────────────── */
+/* WA CARDS hover float                   */
+/* ─────────────────────────────────────── */
+.wa-card {
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.wa-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* ─────────────────────────────────────── */
+/* GAMES IMAGE — float animation          */
+/* ─────────────────────────────────────── */
+.games-image {
+  animation: img-float 4s ease-in-out infinite;
+}
+.games-image:nth-of-type(2) {
+  animation-delay: 0.8s;
+}
+@keyframes img-float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-6px); }
+}
+
+/* ─────────────────────────────────────── */
+/* PAIN ICON BOX — wobble on hover        */
+/* ─────────────────────────────────────── */
+.pain-icon-box {
+  transition: transform 0.2s ease;
+}
+.pain-item:hover .pain-icon-box {
+  animation: icon-wobble 0.5s ease;
+}
+@keyframes icon-wobble {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(-10deg); }
+  50%  { transform: rotate(8deg); }
+  75%  { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* ─────────────────────────────────────── */
+/* SOCIAL APPROVAL — entrada suave        */
+/* ─────────────────────────────────────── */
+.social-approval .check {
+  display: inline-block;
+  animation: check-bounce 2s ease-in-out infinite;
+}
+@keyframes check-bounce {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.3); }
+}
+
+/* ─────────────────────────────────────── */
+/* TOAST — entrada melhorada              */
+/* ─────────────────────────────────────── */
+.toast.toast-show {
+  animation: toast-enter 0.4s cubic-bezier(.34,1.56,.64,1) both;
+}
+@keyframes toast-enter {
+  0%   { opacity: 0; transform: translateX(-120%) scale(0.9); }
+  100% { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+/* ─────────────────────────────────────── */
+/* STARS nos testimoniais — twinkle       */
+/* ─────────────────────────────────────── */
+.stars {
+  display: inline-block;
+  animation: stars-twinkle 2.5s ease-in-out infinite;
+}
+@keyframes stars-twinkle {
+  0%, 100% { filter: brightness(1); }
+  50%       { filter: brightness(1.4) drop-shadow(0 0 4px #FBBF24); }
+}
+
+/* ─────────────────────────────────────── */
+/* GUARANTEE BADGE — rotate in            */
+/* ─────────────────────────────────────── */
+.guarantee-badge {
+  animation: badge-rotate 6s linear infinite;
+}
+@keyframes badge-rotate {
+  0%   { letter-spacing: 0em; }
+  50%  { letter-spacing: 0.08em; }
+  100% { letter-spacing: 0em; }
+}
+
+/* ─────────────────────────────────────── */
+/* RIPPLE on click (qualquer .btn-primary)*/
+/* ─────────────────────────────────────── */
+.ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple-click 0.6s linear;
+  background: rgba(255, 255, 255, 0.45);
+  pointer-events: none;
+}
+@keyframes ripple-click {
+  to { transform: scale(4); opacity: 0; }
+}
+
+/* ─────────────────────────────────────── */
+/* PROGRESS BAR topo da página            */
+/* ─────────────────────────────────────── */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--orange), #FBBF24);
+  z-index: 99999;
+  transition: width 0.1s linear;
+}
+
+/* ─────────────────────────────────────── */
+/* PARTICLE SPARKLES on CTA click         */
+/* ─────────────────────────────────────── */
+.sparkle {
+  position: fixed;
+  pointer-events: none;
+  border-radius: 50%;
+  animation: sparkle-out 0.8s ease-out forwards;
+  z-index: 99998;
+}
+@keyframes sparkle-out {
+  0%   { transform: translate(0,0) scale(1); opacity: 1; }
+  100% { transform: translate(var(--tx), var(--ty)) scale(0); opacity: 0; }
+}
