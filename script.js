@@ -28,7 +28,7 @@ function buildToast(t) {
       </svg>
     </div>
     <div class="toast-body">
-      <strong>${t.name} acaba de garantir o Pack Completo</strong>
+      <strong>${t.name} acaba de comprar el Pack Completo</strong>
       <span>há ${t.time} · ${t.city}</span>
     </div>
     <button class="toast-close" onclick="hideToast()" aria-label="Fechar">×</button>
